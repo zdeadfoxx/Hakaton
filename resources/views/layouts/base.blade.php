@@ -54,7 +54,7 @@
         .nav-item{
             display: inline-block;
         }
-        .header__title{
+        .header__title a{
             font-style: normal;
             font-weight: 900;
             font-size: 30px;

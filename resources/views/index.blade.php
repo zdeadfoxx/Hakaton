@@ -151,7 +151,7 @@
                             </p>
                         </div>
                         <button class="contractor__button buttons">
-                            <a href="#">Стать исполнителем</a>
+                            <a href="{{ route('register') }}">Стать исполнителем</a>
                         </button>
                     </div>
                     <div class="customer__body">
@@ -172,7 +172,7 @@
                            </p>
                         </div>
                         <button class="customer__button buttons">
-                            <a href="#">Стать заказчиком</a>
+                            <a href="{{ route('register') }}">Стать заказчиком</a>
                         </button>
                         </div>
 

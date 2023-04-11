@@ -2,7 +2,7 @@
     <div class="container">
         <div class="header__row">
             <div class="header__title ">
-                <span class="">ATL</span>
+                <a href="{{ route('main') }}">ATL</a>
             </div>
             <nav class="header__navigation">
                 <div class=" ">
@@ -10,7 +10,7 @@
                       <li class="nav-item navbar__nav-item hover">
                         <a href="#">Профиль</a>
                       </li>
-                      <li class="nav-item navbar__nav-item hover">
+                      <li class="nav-item navbar__nav-item ">
                         <a href="#">Усулги</a>
                       </li>
                       <li class="nav-item">
