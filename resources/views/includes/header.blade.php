@@ -7,10 +7,10 @@
             <nav class="header__navigation">
                 <div class=" ">
                     <ul class=" d-flex">
-                      <li class="nav-item navbar__nav-item">
+                      <li class="nav-item navbar__nav-item hover">
                         <a href="#">Профиль</a>
                       </li>
-                      <li class="nav-item navbar__nav-item">
+                      <li class="nav-item navbar__nav-item hover">
                         <a href="#">Усулги</a>
                       </li>
                       <li class="nav-item">

@@ -4,13 +4,13 @@
             <nav class="header__navigation">
                 <div class="footer__nav">
                     <ul class=" d-flex">
-                        <li class="nav-item navbar__nav-item ">
+                        <li class="nav-item navbar__nav-item hover">
                             <a href="#">Главная</a>
                         </li>
-                      <li class="nav-item navbar__nav-item">
+                      <li class="nav-item navbar__nav-item hover">
                         <a href="#">Профиль</a>
                       </li>
-                      <li class="nav-item navbar__nav-item">
+                      <li class="nav-item navbar__nav-item hover">
                         <a href="#">Усулги</a>
                       </li>
                     </ul>
