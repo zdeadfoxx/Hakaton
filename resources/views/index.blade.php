@@ -26,9 +26,8 @@
                 <div class="fullscrean__info">
                     <h1 class="fullscrean__tiitle">Надежные исполнители уже могут помочь!</h1>
                     <div class="fullscrean__text">ATL - это компания, которая специализируется на подборе профессиональных исполнителей для выполнения заказов любой сложности. Она предоставляет высококачественные услуги и использует современные технологии.</div>
-                    <button class="fullscrean__button buttons">
-                        <a href="#">Разместить заказ</a>
-                    </button>
+                    <a class="fullscrean__button buttons hover" href="{{ route('register') }}">Разместить заказ</a>
+
                 </div>
             </div>
             <div class="about_us">

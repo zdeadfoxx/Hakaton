@@ -49,12 +49,21 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-        return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+         return Validator::make($data, [
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'phone' => ['required'],
+            'firstname' => ['required'],
+            'name' => ['required'],
+            'lastname' => ['string'],
+            'info' => ['string'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'checkbox1' => ['required'],
+            'checkbox2' => ['required'],
+            'checkbox3',
         ]);
+
     }
+
 
     /**
      * Create a new user instance after a valid registration.

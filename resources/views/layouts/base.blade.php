@@ -133,9 +133,16 @@
             box-shadow: 5px 5px 5px #00000021
         }
 
-        .fullscrean__button a{
+        .fullscrean__button {
             color:#3D1D0C;
             text-align: center;
+
+        }
+        .nav-item a{
+            color: #99532E;
+        }
+        .nav-link{
+            color: #99532E;
         }
         .border__text{
             padding: 10px 15px;
