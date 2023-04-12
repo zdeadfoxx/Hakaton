@@ -9,7 +9,7 @@
                     <ul class=" d-flex">
                         @if(Auth::user() )
                         <li class="nav-item navbar__nav-item ">
-                           <a href="{{ route('profile.create_order') }}">Усулги</a>
+                           <a href="{{ route('list_orders') }}">Усулги</a>
                          </li>
                         @endif
                     @guest

@@ -61,7 +61,7 @@ class RegisterController extends Controller
             'checkbox2' => ['required'],
             'checkbox3',
         ]);
-
+        dd($data);
     }
 
 

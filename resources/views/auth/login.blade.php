@@ -39,7 +39,6 @@
                             <span>* обязательные поля для заполнения</span>
                         </div>
 
-
                         @if (Route::has('password.request'))
                         <a class="remeber__pawword" href="{{ route('password.request') }}">
                             {{ __('Забыли пароль?') }}
