@@ -38,6 +38,7 @@
                                 <input id="password-confirm" type="password" class="form-control input" name="password_confirmation" required autocomplete="new-password" placeholder="Повторите пароль*">
                             </div>
                         </div>
+
                         <div class="required__text">
                             <span>* обязательные поля для заполнения</span>
                         </div>

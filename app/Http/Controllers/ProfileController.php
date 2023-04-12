@@ -22,9 +22,12 @@ class ProfileController extends Controller
      */
     public function create()
     {
-        //
+        return view('settings_profile');
     }
-
+    public function create_order()
+    {
+        return view('create_orders_profile');
+    }
     /**
      * Store a newly created resource in storage.
      */
@@ -60,8 +63,8 @@ class ProfileController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Profile $profile)
+    public function delete(Profile $profile)
     {
-        //
+        return view('notifyy');
     }
 }

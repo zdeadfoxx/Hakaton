@@ -12,18 +12,21 @@
                             <span class="sitebar__role">Заказчик</span>
                             <!-- Collapsed content -->
                             <ul id="collapseExample1" class="collapse show list-group list-group-flush">
-                              <li class="list-group-item py-1">
-                                <a href="" class="text-reset">Основная информация</a>
-                              </li>
-                              <li class="list-group-item py-1">
-                                <a href="" class="text-reset">Уведомления</a>
-                              </li>
-                              <li class="list-group-item py-1">
-                                <a href="" class="text-reset">Настройки</a>
-                              </li>
-                              <li class="list-group-item py-1">
-                                <a href="" class="exit">Выйти</a>
-                              </li>
+                                <li class="list-group-item py-1">
+                                    <a href="" class="text-reset">Основная информация</a>
+                                  </li>
+                                  <li class="list-group-item py-1">
+                                    <a href="" class="text-reset">Уведомления</a>
+                                  </li>
+                                  <li class="list-group-item py-1">
+                                    <a href="" class="text-reset">История</a>
+                                  </li>
+                                  <li class="list-group-item py-1">
+                                    <a href="" class="text-reset">Настройки</a>
+                                  </li>
+                                  <li class="list-group-item py-1">
+                                    <a href="" class="exit">Выйти</a>
+                                  </li>
                             </ul>
                           </div>
                         </div>

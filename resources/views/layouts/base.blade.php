@@ -25,7 +25,7 @@
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
+    <link rel="shortcut icon" href="{{ asset('img/svg/Services.svg') }}" />
     <style>
         body{
             font-size: 16px;
@@ -681,6 +681,7 @@
                 text-align: center;
                 color: #3D1D0C;
                 margin-top: 10px;
+                padding: 10px;
             }
             .edit__profile{
                 padding: 10px;
@@ -797,6 +798,197 @@
                 line-height: 19px;
                 color: rgba(61, 29, 12, 0.7);
 
+            }
+            .history{
+                margin-bottom: 40px;
+            }
+            .history__button{
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                padding: 15px;
+                gap: 10px;
+                width: 249px;
+                height: 51px;
+                background: #E7EFC8;
+                border-radius: 30px;
+                text-align: center;
+            }
+            .history__title{
+                padding: 10px;
+            }
+            .settings__text{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+
+            .change__personal{
+                margin-right: 50px;
+
+            }
+            .form__setings{
+                display: flex;
+                flex-direction: column;
+            }
+
+
+            .notify{
+                padding: 15px;
+                display: flex;
+                flex-direction: column;
+            }
+            .notify__title{
+                margin-bottom: 15px;
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 21px;
+                color: #3D1D0C;
+            }
+            .notify__text{
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+                color: rgba(61, 29, 12, 0.7);
+            }
+            .notify__body{
+
+            }
+            .notify__text{
+                display: flex;
+                flex-direction: row;
+            }
+            .remmove__buton{
+            border-color: #E7EFC8;
+            border: 1px solid #FFFFFF;
+            }
+            .notify__prof{
+
+            }
+            .seacr__orders{
+                display: flex;
+                    flex-direction: row;
+                    padding: 15px;
+                    width: 800px;
+                    height: 49px;
+
+                    background: #FFFFFF;
+                    box-shadow: 0px 10px 20px rgba(227, 211, 187, 0.25);
+                    border-radius: 20px;
+                    border:  2px solid #FFFFFF;
+                    margin-bottom: 40px;
+                    margin-top: 40px;
+                    margin-right: 15px;
+            }
+            .active__orders-title{
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 36px;
+                line-height: 42px;
+                text-align: right;
+
+                color: #3D1D0C;
+
+            }
+            .serach__body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            .serach__button{
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+                /* identical to box height */
+
+                text-align: center;
+
+                color: #3D1D0C;
+                padding: 15px;
+
+                width: 84px;
+                height: 49px;
+
+                background: #E7EFC8;
+                box-shadow: 0px 10px 20px rgba(199, 213, 144, 0.25);
+                border-radius: 30px;
+                border: 0px solid #FFFFFF;
+            }
+            .orders__button{
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 21px;
+                text-align: center;
+
+                color: #3D1D0C;
+            }
+            .list__orders{
+                display: flex;
+                flex-direction: column;
+            }
+            .concat__title1{
+                padding: 10px;
+            }
+            .order__area{
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                padding: 20px 15px;
+                gap: 10px;
+
+                width: 900px;
+                height: 127px;
+
+                background: #F6F4F1;
+                box-shadow: 0px 10px 20px rgba(227, 211, 187, 0.25);
+                border-radius: 30px;
+                margin-bottom: 20px;
+            }
+            .oreder__input{
+                background: #F6F4F1;
+            box-shadow: 0px 10px 20px rgba(227, 211, 187, 0.25);
+            border-radius: 20px;
+            margin-left: 10px;
+            padding: 10px;
+            }
+            .promo__price p{
+                margin-left: 10px;
+            }
+            .orders__infote{
+                background: rgba(234, 247, 219, 0.9);
+                box-shadow: 0px 10px 20px rgba(234, 246, 219, 0.25);
+                backdrop-filter: blur(2.5px);
+                /* Note: backdrop-filter has minimal browser support */
+
+                border-radius: 20px;
+
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+                text-align: center;
+
+                color: rgba(61, 29, 12, 0.5);
+                width: 400px;
+                padding: 20px;
+            }
+            .buttonssss{
+                text-align: end;
+                align-items: flex-end;
+                display: flex;
+                justify-content: flex-end;
             }
     </style>
 </head>
