@@ -5,10 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Reigster extends Model
+class Notfy extends Model
 {
-    protected $table = 'users_';
-
-    protected  $guarded =[];
     use HasFactory;
+    protected  $guarded =[];
+    protected $table = 'notfy';
 }

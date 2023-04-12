@@ -35,6 +35,12 @@
                                 @enderror
                             </div>
                         </div>
+                        <div class='selectBox'>
+                            <select name="checkbox3">
+                            <option value=1>Исполнитель</option>
+                            <option value=2>Заказчик</option>
+                            </select>
+                            </div>
                         <div class="required__text">
                             <span>* обязательные поля для заполнения</span>
                         </div>
@@ -55,6 +61,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="register__div">
                             <div class="acount">
                                 <div class="acount__link">

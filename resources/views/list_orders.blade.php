@@ -11,87 +11,39 @@
                             <input type="text" placeholder="Поиск" class="seacr__orders">
                             <button class="serach__button hover">Найти</button>
                         </div>
+                        @foreach ($all_order as $orders_item)
                         <div class="main__info list__orders">
                             <div class="main__text-info list__orderssss">
                               <div class="main__text_info list__orderssss">
                                <div class="promo">
-                                <h3 class="promotional main__title-info history">Рекламный ролик</h3>
+                                <h3 class="promotional main__title-info history"> {{ $orders_item->order__name }}</h3>
                                </div>
-                                 <div class="promotional__text history">
-                                    Нужен рекламный ролик! Мы предпочитаем краткое и динамичное видео, которое захватит внимание потенциальных клиентов и покажет, что наш сервис уникален и надежен. В видео должны быть представлены все ключевые особенности нашей платформы и ее преимущества для пользователей. Также можете использовать яркие цвета и интересный саундтрек, чтобы привлечь внимание зрителей. Видео должно быть создано в качестве Full HD или выше, и длительностью не больше 1,5 минут.
+                                 <div class="promotional__text order__title_list">
+                                    {{ $orders_item->order__info }}
                                  </div>
                                  <div class="promo__price">
-                                    <Span> Цена:  <p>  от 1.000 рублей до 5.000 рублей</p></Span>
+                                    <Span> Цена:  <p>  от {{ $orders_item->order__price_ot }} рублей до {{ $orders_item->order__price_do }}рублей</p></Span>
                                  </div>
                                  <div class="promo__price sroki">
-                                    <Span> Сроки:  <p>  3 дня</p></Span>
+                                    <Span> Сроки:  <p>  {{ $orders_item->order__price_ot }} дня</p></Span>
                                  </div>
                                  <div class="promo__price place">
                                     <Span> Место оказание услуги:  <p>  дистанционно</p></Span>
                                  </div>
                               </div>
+
                               <div class="applications">
-                                <p>10 человек уже откликнулось</p>
-                                <button class=" applications__buttons orders__button hover">
-                                    откликнутся
-                                </button>
+                                <form action="{{ route('list_orders.add_notifyy') }}" method="get">
+                                    <button class=" applications__buttons orders__button hover" name="add_notifyy" value="1">
+                                        откликнутся
+                                    </button>
+                                </form>
                               </div>
+
                           </div>
                           </div>
-                          <div class="main__info list__orders">
-                            <div class="main__text-info list__orderssss">
-                              <div class="main__text_info list__orderssss">
-                               <div class="promo">
-                                <h3 class="promotional main__title-info history">Рекламный ролик</h3>
-                               </div>
-                                 <div class="promotional__text history">
-                                    Нужен рекламный ролик! Мы предпочитаем краткое и динамичное видео, которое захватит внимание потенциальных клиентов и покажет, что наш сервис уникален и надежен. В видео должны быть представлены все ключевые особенности нашей платформы и ее преимущества для пользователей. Также можете использовать яркие цвета и интересный саундтрек, чтобы привлечь внимание зрителей. Видео должно быть создано в качестве Full HD или выше, и длительностью не больше 1,5 минут.
-                                 </div>
-                                 <div class="promo__price">
-                                    <Span> Цена:  <p>  от 1.000 рублей до 5.000 рублей</p></Span>
-                                 </div>
-                                 <div class="promo__price sroki">
-                                    <Span> Сроки:  <p>  3 дня</p></Span>
-                                 </div>
-                                 <div class="promo__price place">
-                                    <Span> Место оказание услуги:  <p>  дистанционно</p></Span>
-                                 </div>
-                              </div>
-                              <div class="applications">
-                                <p>10 человек уже откликнулось</p>
-                                <button class=" applications__buttons orders__button hover">
-                                    откликнутся
-                                </button>
-                              </div>
-                          </div>
-                          </div>
-                          <div class="main__info list__orders">
-                            <div class="main__text-info list__orderssss">
-                              <div class="main__text_info list__orderssss">
-                               <div class="promo">
-                                <h3 class="promotional main__title-info history">Рекламный ролик</h3>
-                               </div>
-                                 <div class="promotional__text history">
-                                    Нужен рекламный ролик! Мы предпочитаем краткое и динамичное видео, которое захватит внимание потенциальных клиентов и покажет, что наш сервис уникален и надежен. В видео должны быть представлены все ключевые особенности нашей платформы и ее преимущества для пользователей. Также можете использовать яркие цвета и интересный саундтрек, чтобы привлечь внимание зрителей. Видео должно быть создано в качестве Full HD или выше, и длительностью не больше 1,5 минут.
-                                 </div>
-                                 <div class="promo__price">
-                                    <Span> Цена:  <p>  от 1.000 рублей до 5.000 рублей</p></Span>
-                                 </div>
-                                 <div class="promo__price sroki">
-                                    <Span> Сроки:  <p>  3 дня</p></Span>
-                                 </div>
-                                 <div class="promo__price place">
-                                    <Span> Место оказание услуги:  <p>  дистанционно</p></Span>
-                                 </div>
-                              </div>
-                              <div class="applications">
-                                <p>10 человек уже откликнулось</p>
-                                <button class=" applications__buttons orders__button hover">
-                                    откликнутся
-                                </button>
-                              </div>
-                          </div>
-                          </div>
+
+                          @endforeach
                       </div>
 
                 </div>

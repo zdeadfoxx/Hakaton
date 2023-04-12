@@ -7,11 +7,18 @@
             <nav class="header__navigation">
                 <div class=" ">
                     <ul class=" d-flex">
-                        @if(Auth::user() )
-                        <li class="nav-item navbar__nav-item ">
-                           <a href="{{ route('list_orders') }}">Усулги</a>
-                         </li>
-                        @endif
+                            @if(Auth::user() )
+                            <li class="nav-item navbar__nav-item ">
+                            <a href="{{ route('list_orders') }}">Усулги</a>
+                            </li>
+                            <li class="nav-item navbar__nav-item ">
+                                <a href="{{ route('profile') }}">Профиль</a>
+                            </li>
+                            <li class="nav-item navbar__nav-item ">
+                                <a href="{{ route('list_orders') }}">Заказы</a>
+                            </li>
+                            @endif
+
                     @guest
                         @if (Route::has('login'))
                             <li class="nav-item">
@@ -21,8 +28,10 @@
                     @else
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }}
+                                {{ Auth::user()->email }}
+
                             </a>
+                            <p class="nav-item navbar__nav-item role__header">{{ Auth::user()->role }}</p>
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();

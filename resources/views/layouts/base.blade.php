@@ -1001,6 +1001,12 @@
                 margin-top:20px;
                 margin-bottom:20px;
             }
+            .role__header{
+                margin-left: 10px;
+            }
+            .order__title_list{
+                text-align: center;
+            }
     </style>
 </head>
 <body>

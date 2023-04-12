@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Notfy;
+use App\Models\Order;
 use App\Models\Profile;
 use Illuminate\Http\Request;
 
@@ -14,7 +16,9 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        return view('profile');
+        $all_order = Order::all();
+        $all_Notfy = Notfy::all();
+        return view('profile',compact('all_order','all_Notfy'));
     }
 
     /**
@@ -33,15 +37,26 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+            $request = request()->validate([
+                'order__name' => 'string',
+                'order__info' => 'string',
+                'order__price_ot' => 'string',
+                'order__price_do' => 'string',
+                'order__price_time' => 'string',
+                'order__price_place' => 'string',
+            ]);;
+            Order::create($request);
+            return redirect()->route('profile');
+
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Profile $profile)
+    public function show__not()
     {
-        //
+        $all_order = Order::all();
+        return view('profile',compact('all_order'));
     }
 
     /**
