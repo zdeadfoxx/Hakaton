@@ -15,9 +15,16 @@
                                 <li class="list-group-item py-1">
                                     <a href="#" class="text-reset">Основная информация</a>
                                   </li>
+
+                                  @if ( Auth::user()->role  === 'Заказчик')
                                   <li class="list-group-item py-1">
                                     <a href="#order" class="text-reset notyfy square ">Уведомления</a>
                                   </li>
+                                  @else
+                                  <li class="list-group-item py-1">
+                                    <a href="#order" class="text-reset notyfy  ">Уведомления</a>
+                                  </li>
+                                  @endif
                                   <li class="list-group-item py-1">
                                     <a href="" class="text-reset">История</a>
                                   </li>
@@ -52,13 +59,8 @@
                             </div>
 
                             <ul class="contact__list">
-                                <li>Почта: <p>vikk221@gmail.ru</p></li>
+                                <li>Почта: <p>{{ Auth::user()->email  }}</p></li>
                                 <li>Номер телефона: <p>{{ Auth::user()->phone  }}</p></li>
-                            </ul>
-                            <h2></h2>
-                            <ul class="socail__list">
-                                <li>Вконтакте: <p>@vikk221</p></li>
-                                <li>Телеграмм: <p>@vikk221</p></li>
                             </ul>
                         </div>
                         </div>
@@ -104,7 +106,8 @@
                           </div>
                           <div class="main__info my__orders">
                             <div class="main__text-info">
-                                <h2 class="promotional main__title-info history__title">Выполненые заказы</h2>
+                                @if(Auth::user()->role === 'Заказчик')
+                                <h2 class="promotional main__title-info history__title">Список заказов</h2>
                                 @foreach ($all_order as $item__order)
                                 <div class="main__text_info">
                                     <div class="promo">
@@ -124,16 +127,17 @@
                                     </div>
                                     <p id="order">
                                        @foreach ($all_Notfy as $iNotfy)
-                                       {{ $iNotfy->add_notifyy }}
+                                       1
                                        @endforeach
-                                       количество откликов на заказ
+                                        1 количество откликов на заказ
                                     </p>
                                    </div>
                                    @endforeach
-
+                                   @else
+                                   <h2 class="promotional main__title-info history__title">Список выполненых заказов</h2>
+                                @endif
                             </div>
                           </div>
-                          <p class="hfhfg"></p>
                       </div>
 
                 </div>

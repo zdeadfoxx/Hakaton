@@ -24,7 +24,7 @@
                             </div>
                         </div>
                         <div class='selectBox'>
-                            <select name="checkbox3">
+                            <select name="checkbox3" class="form-control input">
                             <option value=Исполнитель>Исполнитель</option>
                             <option value=Заказчик>Заказчик</option>
                             </select>

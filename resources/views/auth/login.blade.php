@@ -35,12 +35,12 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class='selectBox'>
-                            <select name="checkbox3">
-                            <option value=1>Исполнитель</option>
-                            <option value=2>Заказчик</option>
+                        {{-- <div class='selectBox'>
+                            <select name="checkbox3" class="form-control input">
+                            <option value=Исполнитель>Исполнитель</option>
+                            <option value=Заказчик>Заказчик</option>
                             </select>
-                            </div>
+                            </div> --}}
                         <div class="required__text">
                             <span>* обязательные поля для заполнения</span>
                         </div>
