@@ -13,19 +13,19 @@
                             <!-- Collapsed content -->
                             <ul id="collapseExample1" class="collapse show list-group list-group-flush">
                                 <li class="list-group-item py-1">
-                                    <a href="" class="text-reset">Основная информация</a>
+                                    <a href="#" class="text-reset">Основная информация</a>
                                   </li>
                                   <li class="list-group-item py-1">
-                                    <a href="" class="text-reset">Уведомления</a>
+                                    <a href="#order" class="text-reset notyfy square ">Уведомления</a>
                                   </li>
                                   <li class="list-group-item py-1">
                                     <a href="" class="text-reset">История</a>
                                   </li>
                                   <li class="list-group-item py-1">
-                                    <a href="" class="text-reset">Настройки</a>
+                                    <a href="#" class="text-reset">Настройки</a>
                                   </li>
                                   <li class="list-group-item py-1">
-                                    <a href="" class="exit">Выйти</a>
+                                    <a href="#" class="exit">Выйти</a>
                                   </li>
                             </ul>
                           </div>
@@ -73,16 +73,16 @@
                                  </div>
                                  <form action="{{ route('profile.create_order') }} " method="get">
                                   <div class="promo">
-                                      <h3 class="promotional main__title-info"> <input type="text" class="oreder__input" name="order__name" placeholder="Название заказа"></h3>
+                                      <h3 class="promotional main__title-info"> <input type="text" class="oreder__input" name="order__name" placeholder="Название заказа" required></h3>
                                      </div>
                                        <div class="promotional__text ">
-                                          <textarea class="form-control order__area" id="exampleFormControlTextarea1" name="order__info" rows="6" placeholder="Краткое описание"></textarea>
+                                          <textarea class="form-control order__area" id="exampleFormControlTextarea1" name="order__info" rows="6" placeholder="Краткое описание" required></textarea>
                                        </div>
                                        <div class="promo__price">
-                                          <Span> Цена:  <p>  от <input type="text" class="oreder__input" name="order__price_ot"> до <input type="text" class="oreder__input" name="order__price_do"></p> руб. </Span>
+                                          <Span> Цена:  <p>  от <input type="text" class="oreder__input" name="order__price_ot" required> до <input type="text" class="oreder__input" name="order__price_do" required></p> руб. </Span>
                                        </div>
                                        <div class="promo__price sroki">
-                                          <Span> Сроки:  <p>   <input type="text" class="oreder__input"  name="order__price_time"></p></Span>
+                                          <Span> Сроки:  <p>   <input type="text" class="oreder__input"  name="order__price_time" required></p></Span>
                                        </div>
                                        <div class="promo__price place">
                                           <Span> Место оказание услуги:  <p>   <input type="text"  name="order__price_place" class="oreder__input" value="Дистанционно"></p></Span>
@@ -91,51 +91,67 @@
                                           </p>
                                        </div>
                                       <div class="buttonssss">
-                                          <button class="applications__buttons hover orders__butons">Создать</button>
+                                          <button class="applications__buttons hover orders__butons ">
+
+
+                                            <a href="#contact__popupfdsfds">Создать</a>
+                                          </button>
                                       </div>
                                  </form>
                                 </div>
-
-
                             </div>
 
                                 @endif
                           </div>
-
-
-                            @foreach ($all_order as $item__order)
+                          <div class="main__info my__orders">
                             <div class="main__text-info">
-                              <h2 class="promotional main__title-info history__title">Мои заказы</h2>
-                            <div class="main__text_info">
-                             <div class="promo">
-                              <h3 class="promotional main__title-info history">{{ $item__order->order__name }}</h3>
-                             </div>
-                               <div class="promotional__text history">
-                                {{ $item__order->order__info }}
-                               </div>
-                               <div class="promo__price">
-                                <Span> Цена:  <p>  от {{ $item__order->order__price_ot }} рублей до {{ $item__order->order__price_do }}рублей</p></Span>
-                             </div>
-                             <div class="promo__price sroki">
-                                <Span> Сроки:  <p>  {{ $item__order->order__price_ot }} дня</p></Span>
-                             </div>
-                             <div class="promo__price place">
-                                <Span> Место оказание услуги:  <p>  {{ $item__order->order__price_place }}</p></Span>
-                             </div>
-                             <p>
+                                <h2 class="promotional main__title-info history__title">Выполненые заказы</h2>
+                                @foreach ($all_order as $item__order)
+                                <div class="main__text_info">
+                                    <div class="promo">
+                                     <h3 class="promotional main__title-info history">{{ $item__order->order__name }}</h3>
+                                    </div>
+                                      <div class="promotional__text history">
+                                       {{ $item__order->order__info }}
+                                      </div>
+                                      <div class="promo__price">
+                                       <Span> Цена:  <p>  от {{ $item__order->order__price_ot }} рублей до {{ $item__order->order__price_do }}рублей</p></Span>
+                                    </div>
+                                    <div class="promo__price sroki">
+                                       <Span> Сроки:  <p>  {{ $item__order->order__price_ot }} дня</p></Span>
+                                    </div>
+                                    <div class="promo__price place">
+                                       <Span> Место оказание услуги:  <p>  {{ $item__order->order__price_place }}</p></Span>
+                                    </div>
+                                    <p id="order">
+                                       @foreach ($all_Notfy as $iNotfy)
+                                       {{ $iNotfy->add_notifyy }}
+                                       @endforeach
+                                       количество откликов на заказ
+                                    </p>
+                                   </div>
+                                   @endforeach
 
-                             </p>
                             </div>
-                            </div>
-                            @endforeach
-
-
+                          </div>
+                          <p class="hfhfg"></p>
                       </div>
+
                 </div>
            </div>
-
-
+                    <section class="popup" id="contact__popupfdsfds">
+                        <a href="#form" class="popup__area"></a>
+                        <div class="popup__body">
+                            <div class="popup__content">
+                                <a href="#form" class="popup__close">Х</a>
+                                <h2 class="popup__title">
+                                 Заказ успшено создан!
+                                </h2>
+                            </div>
+                        </div>
+                    </section>
 
         </div>
     </main>
+
 @endsection

@@ -14,11 +14,7 @@
                             <li class="nav-item navbar__nav-item ">
                                 <a href="{{ route('profile') }}">Профиль</a>
                             </li>
-                            <li class="nav-item navbar__nav-item ">
-                                <a href="{{ route('list_orders') }}">Заказы</a>
-                            </li>
                             @endif
-
                     @guest
                         @if (Route::has('login'))
                             <li class="nav-item">
@@ -44,7 +40,6 @@
                                 </form>
                             </div>
                         </li>
-
                       @endguest
 
                     </ul>

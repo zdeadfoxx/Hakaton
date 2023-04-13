@@ -32,20 +32,33 @@
                                  </div>
                               </div>
 
+                              @if(Auth::user()->role === 'Исполнитель')
                               <div class="applications">
                                 <form action="{{ route('list_orders.add_notifyy') }}" method="get">
-                                    <button class=" applications__buttons orders__button hover" name="add_notifyy" value="1">
-                                        откликнутся
+                                    <button class=" applications__buttons orders__button hover " name="add_notifyy" value="1" onclick="changeColor();">
+
+                                        <a href="#contact__popup">откликнутся</a>
                                     </button>
                                 </form>
                               </div>
 
+                              @endif
                           </div>
                           </div>
 
                           @endforeach
                       </div>
-
+                      <section class="popup" id="contact__popup">
+                        <a href="#form" class="popup__area"></a>
+                        <div class="popup__body">
+                            <div class="popup__content">
+                                <a href="#form" class="popup__close">Х</a>
+                                <h2 class="popup__title">
+                                 Заявка усешно отправлена!
+                                </h2>
+                            </div>
+                        </div>
+                    </section>
                 </div>
            </div>
 
