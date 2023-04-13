@@ -1116,3 +1116,32 @@ color: #3D1D0C;
 #red{
     background-color: red;
 }
+#message-success{
+    position: fixed;
+      padding: 10px;
+      margin: 0px;
+      width: 299px;
+      top: 20px;
+      text-align: center;
+      color: rgb(255, 255, 255);
+      right: 20px;
+    background-color:#79ad68;
+}
+#jGrowl{
+    margin: 0 12px 0 12px;
+    right: 0px;
+    top: 0px;
+    display: none;
+}
+.addtocard-product{
+    padding: 10px 0 10px 0;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #3D1D0C;
+    transition:0.4s 0.2s ease;
+    -moz-transition:0.4s 0.2s ease;-o-transition:0.4s 0.2s ease;-webkit-transition:0.4s 0.2s ease;
+}

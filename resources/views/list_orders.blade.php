@@ -37,7 +37,8 @@
                                 <form action="{{ route('list_orders.add_notifyy') }}" method="get">
                                     <button class=" applications__buttons orders__button hover " name="add_notifyy" value="1" onclick="changeColor();">
 
-                                        <a href="#contact__popup">откликнутся</a>
+                                        <a class="add-to-cart addtocard-product" href="#">откликнутся</a>
+                                        <div id="jGrowl"></div>
                                     </button>
                                 </form>
                               </div>
@@ -47,6 +48,21 @@
                           </div>
 
                           @endforeach
+
+
+                          <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                              <div class="toast-header">
+                                <img src="..." class="rounded me-2" alt="...">
+                                <strong class="me-auto">Bootstrap</strong>
+                                <small>11 мин назад</small>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
+                              </div>
+                              <div class="toast-body">
+                                Привет, мир! Это тост-сообщение.
+                              </div>
+                            </div>
+                          </div>
                       </div>
                       <section class="popup" id="contact__popup">
                         <a href="#form" class="popup__area"></a>
